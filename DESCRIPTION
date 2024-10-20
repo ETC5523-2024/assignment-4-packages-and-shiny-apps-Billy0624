@@ -11,3 +11,7 @@ RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
 LazyData: true
+Imports: 
+    dplyr,
+    ggplot2,
+    shiny
