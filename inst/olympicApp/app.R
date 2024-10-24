@@ -11,7 +11,7 @@ ui <- fluidPage(
         selectInput("season", "Select season:", choices = c("Summer", "Winter"), selected = "Summer"),
 
         # Slider for year range
-        sliderInput("yearRange", "Select year range:", min = 1900, max = 2016, value = c(1900, 2016), step = 4),
+        sliderInput("yearRange", "Select year range:", min = 1900, max = 2016, value = c(1900, 2016), step = 4, sep = ""),
 
         # Placeholder select input for sports, initially empty
         selectInput("sport", "Choose sport:", choices = NULL, multiple = TRUE)
