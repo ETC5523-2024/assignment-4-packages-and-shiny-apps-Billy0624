@@ -1,0 +1,146 @@
+---
+title: "genderOlympics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{genderOlympics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Installation
+
+You can install the `genderOlympics` package directly from GitHub using the remotes package. First, ensure you have the remotes package installed, then run the following command to install the package:
+
+```{r eval=FALSE}
+# If you don't have the remotes package installed, install it first
+install.packages("remotes")
+
+# Install the genderOlympics package from GitHub
+remotes::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-Billy0624")
+```
+
+Once installed, you can load the package as usual:
+
+```{r setup}
+library(genderOlympics)
+```
+
+The `genderOlympics` package allows users to explore gender trends in Olympic participation data, focusing on both Summer and Winter Olympics between 1900 and 2016. It comes with a dataset that includes details about each athlete's participation, including the year, event, sport, medal won (if any), and their country of representation.
+
+Additionally, the package offers an interactive Shiny application that allows users to visually explore this data by filtering seasons, year ranges, and specific sports.
+
+This vignette will guide you through the following:
+
+  1. Loading the `olympics_participation` dataset.
+
+  2. Using the provided functions, including launching the interactive Shiny app.
+
+  3. Example use cases for filtering and analyzing the dataset.
+    
+# The olympics_participation dataset
+
+The main dataset provided by this package is `olympics_participation`, which contains data for over 270,000 athletes who participated in the Olympics from 1900 to 2016.
+
+```{r}
+dplyr::glimpse(olympics_participation)
+```
+
+The dataset contains the following columns:
+
+  - `id`: A unique identifier for each athlete.
+  - `name`: The name of the athlete.
+  - `sex`: Gender of the athlete ("M" for male, "F" for female).
+  - `age`: Age of the athlete during the Olympics.
+  - `height`: Athlete’s height (in centimeters).
+  - `weight`: Athlete’s weight (in kilograms).
+  - `team`: The country or team the athlete represented.
+  - `noc`: National Olympic Committee code.
+  - `games`: The specific Olympic Games the athlete participated in (e.g., "1992 Summer").
+  - `year`: The year of the Olympic Games.
+  - `season`: "Summer" or "Winter".
+  - `city`: The host city of the Olympics.
+  - `sport`: The sport in which the athlete participated.
+  - `event`: The specific event within the sport.
+  - `medal`: The medal the athlete won, if any ("Gold", "Silver", "Bronze", or NA if no medal was won).
+
+## Example: Filtering the data
+
+You can easily filter the dataset to answer specific questions about Olympic participation. For example, to get a list of all male basketball players from the 1992 Summer Olympics:
+
+```{r}
+basketball_men_1992 <- olympics_participation |>
+  dplyr::filter(sport == "Basketball", sex == "M", year == 1992, season == "Summer")
+
+head(basketball_men_1992)
+```
+
+## Data summary
+
+You can also use basic summary functions to get a quick overview of the data. For example, the number of athletes who have won medals:
+
+```{r}
+table(olympics_participation$medal)
+```
+
+# Launching the Shiny App
+
+The package comes with a built-in Shiny application that allows users to explore gender participation trends in the Olympics interactively.
+
+To launch the app, use the following command:
+
+```{r eval=FALSE}
+run_app()
+```
+
+The Shiny app provides two visualisations:
+
+  1. Gender participation over time: A plot that shows the number of male and female athletes who participated in the Olympics over time.
+
+  2. Sports participation by gender: A plot that shows how many sports male and female athletes participated in over time.
+
+## Shiny App Features
+
+  - Season selection: Users can choose between Summer or Winter Olympics.
+
+  - Year range filter: A slider allows users to filter the data by a range of years.
+
+  - Sport selection: Users can select specific sports or all sports to visualise participation trends.
+
+## Example: Using the Shiny App
+
+After launching the Shiny app, users can interact with the data by choosing the season, filtering by year range, and selecting specific sports.
+
+Here’s a typical usage flow:
+
+  1. Select the season: Choose between "Summer" and "Winter".
+
+  2. Adjust the year range: Use the slider to filter the data for a specific range of years (e.g., 1980 to 2016).
+
+  3. Choose a sport: Select one or more sports from the dropdown list. Alternatively, check "Select all sports" to view data for all sports.
+
+The app will generate two plots:
+
+  - A line chart showing the number of male and female athletes for the selected sport(s) and season over time.
+
+  - A chart showing how many sports male and female athletes participated in over time.
+    
+# Conclusion
+
+The `genderOlympics` package provides an easy way to explore historical Olympic participation data, with a focus on gender trends. You can use the dataset for your own analysis or launch the Shiny app for a more interactive exploration.
+
+For more details, refer to the help pages for each function and dataset:
+
+```{r}
+?olympics_participation
+```
+
+I hope this package helps you gain insights into gender representation in Olympic sports over time.

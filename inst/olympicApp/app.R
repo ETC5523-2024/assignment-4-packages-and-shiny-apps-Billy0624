@@ -78,7 +78,7 @@ server <- function(input, output, session) {
       dplyr::summarise(count = dplyr::n(), .groups = "drop")
 
     ggplot2::ggplot(data, ggplot2::aes(x = year, y = count, color = sex)) +
-      ggplot2::geom_line(size = 1.2) +
+      ggplot2::geom_line(linewidth = 1.2) +
       ggplot2::geom_point(size = 3) +
       ggplot2::scale_color_manual(name = "Sex", values = sex_color) +
       ggplot2::labs(
@@ -103,8 +103,8 @@ server <- function(input, output, session) {
                        mens_sports = dplyr::n_distinct(sport[sex == "M"]))
 
     ggplot2::ggplot(data, ggplot2::aes(x = year)) +
-      ggplot2::geom_line(ggplot2::aes(y = womens_sports, color = "Women's sports"), size = 1.2) +
-      ggplot2::geom_line(ggplot2::aes(y = mens_sports, color = "Men's sports"), size = 1.2) +
+      ggplot2::geom_line(ggplot2::aes(y = womens_sports, color = "Women's sports"), linewidth = 1.2) +
+      ggplot2::geom_line(ggplot2::aes(y = mens_sports, color = "Men's sports"), linewidth = 1.2) +
       ggplot2::geom_point(ggplot2::aes(y = womens_sports, color = "Women's sports"), size = 3) +
       ggplot2::geom_point(ggplot2::aes(y = mens_sports, color = "Men's sports"), size = 3) +
       ggplot2::labs(
