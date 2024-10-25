@@ -14,7 +14,8 @@ LazyData: true
 Imports: 
     dplyr,
     ggplot2,
-    shiny
+    shiny,
+    shinythemes
 Suggests: 
     knitr,
     rmarkdown
