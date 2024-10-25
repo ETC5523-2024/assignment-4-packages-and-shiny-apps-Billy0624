@@ -8,6 +8,13 @@
 \description{
 A package to analyse historical gender participation trends in the Olympics, including an interactive Shiny app.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-Billy0624/}
+}
+
+}
 \author{
 \strong{Maintainer}: Bilguun Boldbaatar \email{bbol0005@student.monash.edu}
 
