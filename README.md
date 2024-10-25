@@ -13,6 +13,9 @@ a comprehensive dataset, `olympics_participation`, with detailed
 information about each athlete’s participation, and an interactive Shiny
 app for exploring trends across years, sports, and seasons.
 
+For more detailed documentation, visit the [pkgdown
+site](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-Billy0624/).
+
 ## Installation
 
 To install the development version of `genderOlympics` from GitHub, use
@@ -102,3 +105,6 @@ This app provides two main visualizations:
 If you’d like to contribute to `genderOlympics`, feel free to submit
 issues or pull requests on the GitHub repository. Contributions are
 always welcome!
+
+For further details, see the [pkgdown
+site](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-Billy0624/).

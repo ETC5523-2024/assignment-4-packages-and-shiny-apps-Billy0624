@@ -2,7 +2,7 @@
 title: "Introduction to genderOlympics"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{genderOlympics}
+  %\VignetteIndexEntry{Introduction to genderOlympics}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

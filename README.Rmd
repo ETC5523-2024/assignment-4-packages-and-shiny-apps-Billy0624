@@ -20,6 +20,8 @@ knitr::opts_chunk$set(
 
 The `genderOlympics` package provides tools and visualisations to explore gender participation trends in the Olympic Games, spanning from 1900 to 2016 for both Summer and Winter Olympics. This package includes a comprehensive dataset, `olympics_participation`, with detailed information about each athlete's participation, and an interactive Shiny app for exploring trends across years, sports, and seasons.
 
+For more detailed documentation, visit the [pkgdown site](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-Billy0624/).
+
 ## Installation
 
 To install the development version of `genderOlympics` from GitHub, use the following command. Note that you'll need the remotes package for this installation.
@@ -98,3 +100,5 @@ This app provides two main visualizations:
 # Contributing
 
 If you'd like to contribute to `genderOlympics`, feel free to submit issues or pull requests on the GitHub repository. Contributions are always welcome!
+
+For further details, see the [pkgdown site](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-Billy0624/).
