@@ -1,5 +1,5 @@
 ---
-title: "genderOlympics"
+title: "Introduction to genderOlympics"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{genderOlympics}
